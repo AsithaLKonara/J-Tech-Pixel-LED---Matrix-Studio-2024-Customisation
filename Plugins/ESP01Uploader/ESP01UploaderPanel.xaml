@@ -7,6 +7,8 @@
             <StackPanel Orientation="Horizontal" Margin="10,5,0,5">
                 <TextBlock Text="COM Port:" VerticalAlignment="Center" Width="70"/>
                 <ComboBox Name="ComPortCombo" Width="120" Margin="5,0,0,0" ToolTip="Select the COM port"/>
+                <TextBlock Text="Flash Addr:" VerticalAlignment="Center" Width="80" Margin="15,0,0,0"/>
+                <TextBox Name="FlashAddressBox" Width="80" Text="0x00000" ToolTip="Flash address (default: 0x00000)"/>
             </StackPanel>
         </GroupBox>
         <GroupBox Header="Firmware File" Margin="0,0,0,10">

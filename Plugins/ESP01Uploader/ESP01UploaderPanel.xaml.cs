@@ -37,6 +37,8 @@ namespace JTechPixelLED.Plugins.ESP01Uploader
 
             string comPort = ComPortCombo.SelectedItem.ToString();
             string filePath = FilePathBox.Text;
+            string flashAddr = FlashAddressBox?.Text;
+            if (string.IsNullOrWhiteSpace(flashAddr)) flashAddr = "0x00000";
 
             SetControlsEnabled(false);
             UploadProgress.Visibility = System.Windows.Visibility.Visible;
@@ -48,7 +50,7 @@ namespace JTechPixelLED.Plugins.ESP01Uploader
                 var psi = new ProcessStartInfo
                 {
                     FileName = "esptool.py", // Ensure esptool.py is in PATH or provide full path
-                    Arguments = $"--port {comPort} write_flash 0x00000 \"{filePath}\"",
+                    Arguments = $"--port {comPort} write_flash {flashAddr} \"{filePath}\"",
                     RedirectStandardOutput = true,
                     RedirectStandardError = true,
                     UseShellExecute = false,
