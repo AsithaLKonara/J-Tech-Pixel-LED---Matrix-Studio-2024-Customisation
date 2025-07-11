@@ -261,9 +261,8 @@ Test summary: total: 5, failed: 0, succeeded: 5, skipped: 0
 ### Support
 
 For technical support or custom plugin development:
-- **Email**: [Your support email]
-- **Documentation**: [Your documentation URL]
-- **GitHub**: [Your GitHub repository]
+- **Email**: asithalakmlakonara11992081@gmail.com
+- **GitHub**:  https://github.com/AsithaLKonara/
 
 ---
 
@@ -271,7 +270,7 @@ For technical support or custom plugin development:
 
 ### Current Version
 - **Version**: 1.0.0
-- **Date**: [Current Date]
+- **Date**: 12 Jul 2025
 - **Features**: Complete plugin system, export formats, palette editor, animation controls
 
 ### Previous Versions
