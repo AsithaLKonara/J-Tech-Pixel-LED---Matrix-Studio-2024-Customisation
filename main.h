@@ -1027,6 +1027,7 @@ private:
 
 public:
 	__fastcall TfrmMain(TComponent* Owner);
+	void SetPaletteFromVector(const std::vector<int>& palette);
 
 BEGIN_MESSAGE_MAP
    MESSAGE_HANDLER(WM_DROPFILES, TWMDropFiles, WmDropFiles)

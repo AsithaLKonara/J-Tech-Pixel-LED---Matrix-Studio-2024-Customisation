@@ -6189,3 +6189,13 @@ void __fastcall TfrmMain::miDuplicatePaletteColourClick(TObject *Sender)
 {
     FramePalettePanel->sbDuplicateColourClick(Sender);
 }
+
+void TfrmMain::SetPaletteFromVector(const std::vector<int>& palette) {
+    // Set the palette colors in the FramePalettePanel and update the UI
+    FramePalettePanel->Palette.clear();
+    for (int color : palette) {
+        FramePalettePanel->Palette.push_back(color);
+    }
+    FramePalettePanel->SetSelectedPaletteIndex(0);
+    FramePalettePanel->UpdatePaletteUI();
+}
