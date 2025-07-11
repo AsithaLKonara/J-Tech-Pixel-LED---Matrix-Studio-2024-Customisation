@@ -119,6 +119,9 @@ __fastcall TfrmExport::TfrmExport(TComponent* Owner)
 	cbLineCount->ItemIndex = 1;
 
 	cbAutoPreview->Checked = true;
+
+	// Add tooltips/help for export formats
+	bExport->Hint = L"Export as .bin (raw binary for microcontrollers), .dat (data file, same as .bin), or .hex (human-readable hex dump for inspection or text-based uploaders).\n\nChoose .bin or .dat for uploading to hardware; choose .hex for viewing or text-based tools.";
 }
 
 
@@ -1473,6 +1476,8 @@ void __fastcall TfrmExport::bExportClick(TObject *Sender)
 		sdExport->Filter     = L"Binary file (.bin)|*.bin|Include file (.inc)|*.inc|Data file (.dat)|*.dat|Hex dump (.hex)|*.hex";
 		sdExport->DefaultExt = L".bin";
 
+		// Add tooltips/help for each filter option (shown in dialog)
+		// Note: VCL SaveDialog does not support per-filter tooltips, so add a label or message box if needed.
 		if (sdExport->Execute())
 		{
 			PreviewBinary();
@@ -1482,16 +1487,25 @@ void __fastcall TfrmExport::bExportClick(TObject *Sender)
 			{
 				// Write as hex dump (text)
 				FileUtility::SaveVector(sdExport->FileName.c_str(), IOutput);
+				ShowMessage(L"Exported as .hex (human-readable hex dump). Use this for inspection or text-based uploaders.");
 			}
-			else
+			else if (ext == L".bin" || ext == L".dat")
 			{
 				if (!SaveBinaryData(sdExport->FileName.c_str()))
 				{
 					MessageDlg(L"Error Saving Binary Data", mtError, TMsgDlgButtons() << mbOK, 0);
 				}
+				else
+				{
+					ShowMessage(L"Exported as .bin/.dat (raw binary). Use this for uploading to microcontrollers or hardware.");
+				}
+			}
+			else
+			{
+				ShowMessage(L"Exported in selected format.");
 			}
 		}
-        break;
+		break;
 	}
 }
 
@@ -1704,7 +1718,7 @@ void TfrmExport::SetGuiLanguageText()
 	GroupBox6->Caption = GLanguageHandler->Text[kOutput].c_str();
 
 	bExport->Caption = GLanguageHandler->Text[kExport].c_str();
-	bExport->Hint = L"Export as .bin (raw binary), .dat (data), or .hex (human-readable hex dump)";
+	bExport->Hint = L"Export as .bin (raw binary for microcontrollers), .dat (data file, same as .bin), or .hex (human-readable hex dump for inspection or text-based uploaders).\n\nChoose .bin or .dat for uploading to hardware; choose .hex for viewing or text-based tools.";
 
 	bClose->Caption = GLanguageHandler->Text[kOK].c_str();
 	bCancel->Caption = GLanguageHandler->Text[kCancel].c_str();
