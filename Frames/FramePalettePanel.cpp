@@ -22,6 +22,7 @@
 #include "Utility.h"
 #include <fstream>
 #include <nlohmann/json.hpp>
+#include <codecvt>
 
 extern LanguageHandler *GLanguageHandler;
 extern SystemSettings *GSystemSettings;
@@ -378,6 +379,35 @@ void TframePalette::LoadPaletteFromJSON(const std::wstring &filename)
         SetSelectedPaletteIndex(0);
         UpdatePaletteUI();
     }
+}
+
+std::vector<int> TframePalette::LoadPaletteAuto(const std::wstring &filename)
+{
+    std::vector<int> result;
+    if (filename.size() > 5 && filename.substr(filename.size()-5) == L".json") {
+        // JSON
+        nlohmann::json j;
+        std::ifstream file(filename);
+        if (file) {
+            file >> j;
+            for (auto &c : j["colors"]) {
+                result.push_back(c.get<int>());
+            }
+        }
+    } else {
+        // Plain text
+        std::wifstream file(filename);
+        if (file) {
+            std::wstring line;
+            while (std::getline(file, line)) {
+                try {
+                    int color = std::stoi(line, nullptr, 16);
+                    result.push_back(color);
+                } catch (...) {}
+            }
+        }
+    }
+    return result;
 }
 
 void __fastcall TframePalette::sbSavePaletteClick(TObject *Sender)

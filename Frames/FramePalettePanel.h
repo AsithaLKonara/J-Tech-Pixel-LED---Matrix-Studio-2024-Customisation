@@ -120,6 +120,8 @@ public:
 
 	std::function<void(int, int)> OnColourClick;
 	std::function<void(int)> OnColourMove;
+
+	static std::vector<int> LoadPaletteAuto(const std::wstring &filename);
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TframePalette *framePalette;
