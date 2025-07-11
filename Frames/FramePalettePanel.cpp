@@ -20,6 +20,8 @@
 #include "Registry.h"
 #include "SystemSettings.h"
 #include "Utility.h"
+#include <fstream>
+#include <nlohmann/json.hpp>
 
 extern LanguageHandler *GLanguageHandler;
 extern SystemSettings *GSystemSettings;
@@ -32,10 +34,14 @@ TframePalette *framePalette;
 __fastcall TframePalette::TframePalette(TComponent* Owner)
 	: TFrame(Owner)
 {
-    sbSavePalette->Hint = L"Save current palette to file (plain text, one hex color per line)";
-    sbLoadPalette->Hint = L"Load palette from file (plain text, one hex color per line)";
+    sbSavePalette->Hint = L"Save current palette to file (plain text, one hex color per line or JSON)";
+    sbLoadPalette->Hint = L"Load palette from file (plain text, one hex color per line or JSON)";
     sbSavePalette->OnClick = sbSavePaletteClick;
     sbLoadPalette->OnClick = sbLoadPaletteClick;
+    sbMoveUp->OnClick = sbMoveUpClick;
+    sbMoveDown->OnClick = sbMoveDownClick;
+    sbDeleteColour->OnClick = sbDeleteColourClick;
+    sbDuplicateColour->OnClick = sbDuplicateColourClick;
 }
 
 
@@ -309,18 +315,88 @@ void __fastcall TframePalette::bClearClick(TObject *Sender)
 	}
 }
 
+void __fastcall TframePalette::sbMoveUpClick(TObject *Sender)
+{
+    int idx = GetSelectedPaletteIndex();
+    if (idx > 0) {
+        std::swap(Palette[idx], Palette[idx-1]);
+        SetSelectedPaletteIndex(idx-1);
+        UpdatePaletteUI();
+    }
+}
+
+void __fastcall TframePalette::sbMoveDownClick(TObject *Sender)
+{
+    int idx = GetSelectedPaletteIndex();
+    if (idx >= 0 && idx < Palette.size()-1) {
+        std::swap(Palette[idx], Palette[idx+1]);
+        SetSelectedPaletteIndex(idx+1);
+        UpdatePaletteUI();
+    }
+}
+
+void __fastcall TframePalette::sbDeleteColourClick(TObject *Sender)
+{
+    int idx = GetSelectedPaletteIndex();
+    if (idx >= 0 && Palette.size() > 1) {
+        Palette.erase(Palette.begin() + idx);
+        SetSelectedPaletteIndex(std::max(0, idx-1));
+        UpdatePaletteUI();
+    }
+}
+
+void __fastcall TframePalette::sbDuplicateColourClick(TObject *Sender)
+{
+    int idx = GetSelectedPaletteIndex();
+    if (idx >= 0) {
+        Palette.insert(Palette.begin() + idx, Palette[idx]);
+        SetSelectedPaletteIndex(idx+1);
+        UpdatePaletteUI();
+    }
+}
+
+void TframePalette::SavePaletteAsJSON(const std::wstring &filename)
+{
+    nlohmann::json j;
+    for (auto color : Palette) {
+        j["colors"].push_back(color);
+    }
+    std::ofstream file(filename);
+    if (file) file << j.dump(2);
+}
+
+void TframePalette::LoadPaletteFromJSON(const std::wstring &filename)
+{
+    nlohmann::json j;
+    std::ifstream file(filename);
+    if (file) {
+        file >> j;
+        Palette.clear();
+        for (auto &c : j["colors"]) {
+            Palette.push_back(c.get<int>());
+        }
+        SetSelectedPaletteIndex(0);
+        UpdatePaletteUI();
+    }
+}
+
 void __fastcall TframePalette::sbSavePaletteClick(TObject *Sender)
 {
     if (sdPalette->Execute())
     {
-        std::wofstream file(sdPalette->FileName.c_str());
-        if (file)
+        std::wstring fname = sdPalette->FileName.c_str();
+        if (fname.size() > 5 && fname.substr(fname.size()-5) == L".json")
+            SavePaletteAsJSON(fname);
+        else
         {
-            for (int t = 0; t < kPalletCount; t++)
+            std::wofstream file(fname);
+            if (file)
             {
-                file << std::hex << std::setw(6) << std::setfill(L'0') << (RGBPaletteHistory[t]->Brush->Color & 0xFFFFFF) << std::endl;
+                for (auto color : Palette)
+                {
+                    file << std::hex << std::setw(6) << std::setfill(L'0') << color << L"\n";
+                }
             }
-            file.close();
         }
     }
 }
@@ -329,23 +405,24 @@ void __fastcall TframePalette::sbLoadPaletteClick(TObject *Sender)
 {
     if (odPalette->Execute())
     {
-        std::wifstream file(odPalette->FileName.c_str());
-        if (file)
+        std::wstring fname = odPalette->FileName.c_str();
+        if (fname.size() > 5 && fname.substr(fname.size()-5) == L".json")
+            LoadPaletteFromJSON(fname);
+        else
         {
-            std::wstring line;
-            int idx = 0;
-            while (std::getline(file, line) && idx < kPalletCount)
+            std::wifstream file(fname);
+            if (file)
             {
-                int color = 0;
-                try {
-                    color = std::stoi(line, nullptr, 16);
-                } catch (...) {
-                    color = 0;
+                Palette.clear();
+                std::wstring line;
+                while (std::getline(file, line))
+                {
+                    int color = std::stoi(line, nullptr, 16);
+                    Palette.push_back(color);
                 }
-                RGBPaletteHistory[idx]->Brush->Color = TColor(color);
-                idx++;
+                SetSelectedPaletteIndex(0);
+                UpdatePaletteUI();
             }
-            file.close();
         }
     }
 }

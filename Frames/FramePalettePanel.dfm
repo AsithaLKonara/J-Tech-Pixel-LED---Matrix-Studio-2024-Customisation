@@ -468,13 +468,49 @@ object framePalette: TframePalette
     OnClick = sbLoadPaletteClick
     Hint = 'Load palette from file (plain text, one hex color per line)'
   end
+  object sbMoveUp: TSpeedButton
+    Left = 200
+    Top = 420
+    Width = 25
+    Height = 25
+    Caption = '↑'
+    OnClick = sbMoveUpClick
+    Hint = 'Move selected color up'
+  end
+  object sbMoveDown: TSpeedButton
+    Left = 230
+    Top = 420
+    Width = 25
+    Height = 25
+    Caption = '↓'
+    OnClick = sbMoveDownClick
+    Hint = 'Move selected color down'
+  end
+  object sbDeleteColour: TSpeedButton
+    Left = 260
+    Top = 420
+    Width = 25
+    Height = 25
+    Caption = 'Del'
+    OnClick = sbDeleteColourClick
+    Hint = 'Delete selected color'
+  end
+  object sbDuplicateColour: TSpeedButton
+    Left = 290
+    Top = 420
+    Width = 25
+    Height = 25
+    Caption = 'Dup'
+    OnClick = sbDuplicateColourClick
+    Hint = 'Duplicate selected color'
+  end
   object odPalette: TOpenDialog
-    Filter = 'Palette files (*.txt)|*.txt|All files (*.*)|*.*'
-    Title = 'Load Palette'
+    Filter = 'Palette files (*.txt;*.json)|*.txt;*.json|Text files (*.txt)|*.txt|JSON files (*.json)|*.json|All files (*.*)|*.*'
+    Title = 'Open Palette File'
   end
   object sdPalette: TSaveDialog
-    Filter = 'Palette files (*.txt)|*.txt|All files (*.*)|*.*'
-    Title = 'Save Palette'
+    Filter = 'Palette files (*.txt;*.json)|*.txt;*.json|Text files (*.txt)|*.txt|JSON files (*.json)|*.json|All files (*.*)|*.*'
+    Title = 'Save Palette File'
   end
   object tbRed: TTrackBar
     Left = 6

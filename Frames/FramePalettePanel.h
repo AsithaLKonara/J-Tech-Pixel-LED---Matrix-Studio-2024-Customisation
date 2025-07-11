@@ -72,6 +72,10 @@ __published:	// IDE-managed Components
 	TSpeedButton *bClear;
 	TSpeedButton *sbSavePalette;
 	TSpeedButton *sbLoadPalette;
+	TSpeedButton *sbMoveUp;
+	TSpeedButton *sbMoveDown;
+	TSpeedButton *sbDeleteColour;
+	TSpeedButton *sbDuplicateColour;
 	TOpenDialog *odPalette;
 	TSaveDialog *sdPalette;
 	void __fastcall eRedKeyPress(TObject *Sender, System::WideChar &Key);
@@ -82,6 +86,10 @@ __published:	// IDE-managed Components
 	void __fastcall bClearClick(TObject *Sender);
 	void __fastcall sbSavePaletteClick(TObject *Sender);
 	void __fastcall sbLoadPaletteClick(TObject *Sender);
+	void __fastcall sbMoveUpClick(TObject *Sender);
+	void __fastcall sbMoveDownClick(TObject *Sender);
+	void __fastcall sbDeleteColourClick(TObject *Sender);
+	void __fastcall sbDuplicateColourClick(TObject *Sender);
 
 private:
 
@@ -97,6 +105,8 @@ private:
 
 	bool LoadPaletteHistory();
 	bool SavePaletteHistory();
+	void SavePaletteAsJSON(const std::wstring &filename);
+	void LoadPaletteFromJSON(const std::wstring &filename);
 
 public:
 	__fastcall TframePalette(TComponent* Owner);
