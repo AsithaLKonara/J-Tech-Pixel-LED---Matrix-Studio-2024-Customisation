@@ -1,0 +1,13 @@
+<UserControl x:Class="JTechPixelLED.Plugins.ATM01Uploader.ATM01UploaderPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="180" Width="420">
+    <Grid>
+        <TextBlock TextWrapping="Wrap"
+                   FontSize="15"
+                   Foreground="DarkRed"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Text="Support for ATM01 / RA508 or other proprietary chips is not included by default.\n\nTo enable this feature, please contact support with your programmer type, protocol, and test hardware.\n\nCustom plugin development is available as a paid service."/>
+    </Grid>
+</UserControl> 
