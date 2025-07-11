@@ -831,6 +831,12 @@ __published:	// IDE-managed Components
 	void __fastcall miHideIgnoredPixelsClick(TObject *Sender);
 	void __fastcall tbAnimationSpeedChange(TObject *Sender);
 	void __fastcall eAnimationSpeedChange(TObject *Sender);
+	void __fastcall miSavePaletteClick(TObject *Sender);
+	void __fastcall miLoadPaletteClick(TObject *Sender);
+	void __fastcall miMoveUpPaletteClick(TObject *Sender);
+	void __fastcall miMoveDownPaletteClick(TObject *Sender);
+	void __fastcall miDeletePaletteColourClick(TObject *Sender);
+	void __fastcall miDuplicatePaletteColourClick(TObject *Sender);
 
 private:
 

@@ -499,8 +499,8 @@ void TfrmMain::InitFrames()
 	FramePalettePanel->Align         = alClient;
 	FramePalettePanel->OnColourClick = std::bind(PaletteColourSelected, std::placeholders::_1, std::placeholders::_2);
 	FramePalettePanel->OnColourMove  = std::bind(PaletteColourOver, std::placeholders::_1);
-
 	FramePalettePanel->Init();
+	FramePalettePanel->PopupMenu = puPalette;
 
 	FrameFontPanel = new TframeFont(this);
 	FrameFontPanel->Parent  = pbFont;
@@ -6158,4 +6158,34 @@ void __fastcall TfrmMain::eAnimationSpeedChange(TObject *Sender)
     timerAnimate->Interval = ms;
     int fps = ms > 0 ? 1000 / ms : 0;
     lFPS->Caption = (std::to_wstring(fps) + L" FPS").c_str();
+}
+
+void __fastcall TfrmMain::miSavePaletteClick(TObject *Sender)
+{
+    FramePalettePanel->sbSavePaletteClick(Sender);
+}
+
+void __fastcall TfrmMain::miLoadPaletteClick(TObject *Sender)
+{
+    FramePalettePanel->sbLoadPaletteClick(Sender);
+}
+
+void __fastcall TfrmMain::miMoveUpPaletteClick(TObject *Sender)
+{
+    FramePalettePanel->sbMoveUpClick(Sender);
+}
+
+void __fastcall TfrmMain::miMoveDownPaletteClick(TObject *Sender)
+{
+    FramePalettePanel->sbMoveDownClick(Sender);
+}
+
+void __fastcall TfrmMain::miDeletePaletteColourClick(TObject *Sender)
+{
+    FramePalettePanel->sbDeleteColourClick(Sender);
+}
+
+void __fastcall TfrmMain::miDuplicatePaletteColourClick(TObject *Sender)
+{
+    FramePalettePanel->sbDuplicateColourClick(Sender);
 }
