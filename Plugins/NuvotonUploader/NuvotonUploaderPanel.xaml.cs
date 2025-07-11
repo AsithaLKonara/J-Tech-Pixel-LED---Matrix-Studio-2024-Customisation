@@ -35,6 +35,7 @@ namespace JTechPixelLED.Plugins.NuvotonUploader
                 return;
             }
 
+            string chip = (ChipCombo.SelectedItem as ComboBoxItem)?.Content?.ToString() ?? "M031";
             string comPort = ComPortCombo.SelectedItem.ToString();
             string filePath = FilePathBox.Text;
 
@@ -48,7 +49,7 @@ namespace JTechPixelLED.Plugins.NuvotonUploader
                 var psi = new ProcessStartInfo
                 {
                     FileName = "NuLinkISP.exe", // Ensure NuLinkISP.exe is in PATH or provide full path
-                    Arguments = $"-port {comPort} -file \"{filePath}\"", // Adjust arguments as needed
+                    Arguments = $"-chip {chip} -file \"{filePath}\" -port {comPort}", // Adjust arguments as needed
                     RedirectStandardOutput = true,
                     RedirectStandardError = true,
                     UseShellExecute = false,

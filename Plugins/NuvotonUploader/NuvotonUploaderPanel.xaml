@@ -5,6 +5,12 @@
         <TextBlock Text="Nuvoton (Nu-Link) Upload" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
         <GroupBox Header="Connection" Margin="0,0,0,10">
             <StackPanel Orientation="Horizontal" Margin="10,5,0,5">
+                <TextBlock Text="Chip:" VerticalAlignment="Center" Width="50"/>
+                <ComboBox Name="ChipCombo" Width="90" Margin="0,0,10,0" ToolTip="Select the chip">
+                    <ComboBoxItem Content="M031" IsSelected="True"/>
+                    <ComboBoxItem Content="M051"/>
+                    <ComboBoxItem Content="M252"/>
+                </ComboBox>
                 <TextBlock Text="COM Port:" VerticalAlignment="Center" Width="70"/>
                 <ComboBox Name="ComPortCombo" Width="120" Margin="5,0,0,0" ToolTip="Select the COM port"/>
             </StackPanel>
