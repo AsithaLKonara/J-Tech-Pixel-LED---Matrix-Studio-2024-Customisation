@@ -43,6 +43,18 @@ __fastcall TframePalette::TframePalette(TComponent* Owner)
     sbMoveDown->OnClick = sbMoveDownClick;
     sbDeleteColour->OnClick = sbDeleteColourClick;
     sbDuplicateColour->OnClick = sbDuplicateColourClick;
+
+    // Metadata UI
+    ePaletteName->Text = L"Palette Name";
+    ePaletteDescription->Text = L"Palette Description";
+    ePaletteName->OnChange = [](TObject* Sender) {
+        TframePalette* self = static_cast<TframePalette*>(Sender->Owner);
+        self->PaletteName = self->ePaletteName->Text.c_str();
+    };
+    ePaletteDescription->OnChange = [](TObject* Sender) {
+        TframePalette* self = static_cast<TframePalette*>(Sender->Owner);
+        self->PaletteDescription = self->ePaletteDescription->Text.c_str();
+    };
 }
 
 
@@ -356,27 +368,60 @@ void __fastcall TframePalette::sbDuplicateColourClick(TObject *Sender)
     }
 }
 
-void TframePalette::SavePaletteAsJSON(const std::wstring &filename)
-{
-    nlohmann::json j;
-    for (auto color : Palette) {
-        j["colors"].push_back(color);
-    }
-    std::ofstream file(filename);
-    if (file) file << j.dump(2);
+void TframePalette::SetPaletteName(const std::wstring& name) {
+    PaletteName = name;
+    ePaletteName->Text = name.c_str();
+}
+void TframePalette::SetPaletteDescription(const std::wstring& desc) {
+    PaletteDescription = desc;
+    ePaletteDescription->Text = desc.c_str();
+}
+std::wstring TframePalette::GetPaletteName() const {
+    return PaletteName;
+}
+std::wstring TframePalette::GetPaletteDescription() const {
+    return PaletteDescription;
+}
+void TframePalette::UpdateMetadataUI() {
+    ePaletteName->Text = PaletteName.c_str();
+    ePaletteDescription->Text = PaletteDescription.c_str();
 }
 
-void TframePalette::LoadPaletteFromJSON(const std::wstring &filename)
-{
+void TframePalette::SavePaletteAsJSON(const std::wstring &filename) {
+    nlohmann::json j;
+    j["name"] = Utility::WS2US(PaletteName);
+    j["description"] = Utility::WS2US(PaletteDescription);
+    j["colors"] = nlohmann::json::array();
+    for (int t = 0; t < kPalletCount; t++) {
+        j["colors"].push_back(Palette[t]);
+    }
+    std::ofstream file(filename);
+    if (file) {
+        file << j.dump(2);
+    }
+}
+void TframePalette::LoadPaletteFromJSON(const std::wstring &filename) {
     nlohmann::json j;
     std::ifstream file(filename);
     if (file) {
         file >> j;
         Palette.clear();
-        for (auto &c : j["colors"]) {
-            Palette.push_back(c.get<int>());
+        if (j.contains("colors")) {
+            for (auto &c : j["colors"]) {
+                Palette.push_back(c.get<int>());
+            }
         }
-        SetSelectedPaletteIndex(0);
+        if (j.contains("name")) {
+            PaletteName = Utility::US2WS(j["name"].get<std::string>());
+        } else {
+            PaletteName = L"";
+        }
+        if (j.contains("description")) {
+            PaletteDescription = Utility::US2WS(j["description"].get<std::string>());
+        } else {
+            PaletteDescription = L"";
+        }
+        UpdateMetadataUI();
         UpdatePaletteUI();
     }
 }

@@ -108,6 +108,9 @@ private:
 	void SavePaletteAsJSON(const std::wstring &filename);
 	void LoadPaletteFromJSON(const std::wstring &filename);
 
+    std::wstring PaletteName;
+    std::wstring PaletteDescription;
+
 public:
 	__fastcall TframePalette(TComponent* Owner);
 
@@ -122,6 +125,12 @@ public:
 	std::function<void(int)> OnColourMove;
 
 	static std::vector<int> LoadPaletteAuto(const std::wstring &filename);
+
+    void SetPaletteName(const std::wstring& name);
+    void SetPaletteDescription(const std::wstring& desc);
+    std::wstring GetPaletteName() const;
+    std::wstring GetPaletteDescription() const;
+    void UpdateMetadataUI();
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TframePalette *framePalette;

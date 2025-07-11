@@ -570,4 +570,36 @@ object framePalette: TframePalette
     TabOrder = 5
     OnChange = tbRedChange
   end
+  object ePaletteName: TEdit
+    Left = 10
+    Top = 10
+    Width = 200
+    Height = 24
+    Text = 'Palette Name'
+    TabOrder = 0
+    Hint = 'Edit palette name'
+  end
+  object ePaletteDescription: TEdit
+    Left = 10
+    Top = 40
+    Width = 300
+    Height = 24
+    Text = 'Palette Description'
+    TabOrder = 1
+    Hint = 'Edit palette description'
+  end
+  object lPaletteName: TLabel
+    Left = 220
+    Top = 10
+    Width = 80
+    Height = 18
+    Caption = 'Name:'
+  end
+  object lPaletteDescription: TLabel
+    Left = 320
+    Top = 40
+    Width = 80
+    Height = 18
+    Caption = 'Description:'
+  end
 end
