@@ -12,6 +12,8 @@
             <Button Content="Clone Frame" Width="90" Margin="5,0,0,0" Click="CloneFrame_Click"/>
             <Button Content="Play" Width="60" Margin="10,0,0,0" Click="PlayAnimation_Click"/>
             <Button Content="Stop" Width="60" Margin="5,0,0,0" Click="StopAnimation_Click"/>
+            <Button Content="Export" Width="70" Margin="10,0,0,0" Click="Export_Click"/>
+            <Button Content="Import" Width="70" Margin="5,0,0,0" Click="Import_Click"/>
             <TextBlock Text="Grid Size:" Margin="20,0,0,0" VerticalAlignment="Center"/>
             <Slider Name="GridSizeSlider" Minimum="8" Maximum="150" Value="16" Width="100" TickFrequency="1" IsSnapToTickEnabled="True" Margin="5,0,0,0" ValueChanged="GridSizeSlider_ValueChanged"/>
             <CheckBox Name="RgbModeCheck" Content="RGB Mode" Margin="20,0,0,0"/>
