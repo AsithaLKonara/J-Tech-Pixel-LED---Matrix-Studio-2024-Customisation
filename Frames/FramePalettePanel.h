@@ -70,12 +70,18 @@ __published:	// IDE-managed Components
 	TShape *sRGBP34;
 	TShape *sRGBP35;
 	TSpeedButton *bClear;
+	TSpeedButton *sbSavePalette;
+	TSpeedButton *sbLoadPalette;
+	TOpenDialog *odPalette;
+	TSaveDialog *sdPalette;
 	void __fastcall eRedKeyPress(TObject *Sender, System::WideChar &Key);
 	void __fastcall sRGBP1MouseDown(TObject *Sender, TMouseButton Button, TShiftState Shift,
           int X, int Y);
 	void __fastcall sRGBP1MouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
 	void __fastcall tbRedChange(TObject *Sender);
 	void __fastcall bClearClick(TObject *Sender);
+	void __fastcall sbSavePaletteClick(TObject *Sender);
+	void __fastcall sbLoadPaletteClick(TObject *Sender);
 
 private:
 

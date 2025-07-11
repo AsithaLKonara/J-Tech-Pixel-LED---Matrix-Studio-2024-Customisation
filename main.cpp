@@ -433,29 +433,29 @@ void TfrmMain::InitComponentCache()
 
 void TfrmMain::ConfigureControls()
 {
-	cbRotateAngle->Items->Add(L"5°");
-	cbRotateAngle->Items->Add(L"10°");
-	cbRotateAngle->Items->Add(L"15°");
-	cbRotateAngle->Items->Add(L"18°");
-	cbRotateAngle->Items->Add(L"20°");
-	cbRotateAngle->Items->Add(L"22.5°");
-	cbRotateAngle->Items->Add(L"25°");
-	cbRotateAngle->Items->Add(L"30°");
-	cbRotateAngle->Items->Add(L"35°");
-	cbRotateAngle->Items->Add(L"36°");
-	cbRotateAngle->Items->Add(L"40°");
-	cbRotateAngle->Items->Add(L"45°");
-	cbRotateAngle->Items->Add(L"50°");
-	cbRotateAngle->Items->Add(L"55°");
-	cbRotateAngle->Items->Add(L"60°");
-	cbRotateAngle->Items->Add(L"65°");
-	cbRotateAngle->Items->Add(L"67.5°");
-	cbRotateAngle->Items->Add(L"70°");
-	cbRotateAngle->Items->Add(L"72°");
-	cbRotateAngle->Items->Add(L"75°");
-	cbRotateAngle->Items->Add(L"80°");
-	cbRotateAngle->Items->Add(L"85°");
-	cbRotateAngle->Items->Add(L"90°");
+	cbRotateAngle->Items->Add(L"5ï¿½");
+	cbRotateAngle->Items->Add(L"10ï¿½");
+	cbRotateAngle->Items->Add(L"15ï¿½");
+	cbRotateAngle->Items->Add(L"18ï¿½");
+	cbRotateAngle->Items->Add(L"20ï¿½");
+	cbRotateAngle->Items->Add(L"22.5ï¿½");
+	cbRotateAngle->Items->Add(L"25ï¿½");
+	cbRotateAngle->Items->Add(L"30ï¿½");
+	cbRotateAngle->Items->Add(L"35ï¿½");
+	cbRotateAngle->Items->Add(L"36ï¿½");
+	cbRotateAngle->Items->Add(L"40ï¿½");
+	cbRotateAngle->Items->Add(L"45ï¿½");
+	cbRotateAngle->Items->Add(L"50ï¿½");
+	cbRotateAngle->Items->Add(L"55ï¿½");
+	cbRotateAngle->Items->Add(L"60ï¿½");
+	cbRotateAngle->Items->Add(L"65ï¿½");
+	cbRotateAngle->Items->Add(L"67.5ï¿½");
+	cbRotateAngle->Items->Add(L"70ï¿½");
+	cbRotateAngle->Items->Add(L"72ï¿½");
+	cbRotateAngle->Items->Add(L"75ï¿½");
+	cbRotateAngle->Items->Add(L"80ï¿½");
+	cbRotateAngle->Items->Add(L"85ï¿½");
+	cbRotateAngle->Items->Add(L"90ï¿½");
 	cbRotateAngle->ItemIndex = 0;
 
 	for (int x = 1; x <= 72; x++)
@@ -6138,4 +6138,24 @@ void TfrmMain::LoadWithWarnings(const std::wstring file_name)
 
 	Application->ProcessMessages();
 	thematrix->SetMatrixReadOnly(false);
+}
+
+void __fastcall TfrmMain::tbAnimationSpeedChange(TObject *Sender)
+{
+    int ms = tbAnimationSpeed->Position;
+    eAnimationSpeed->Text = std::to_wstring(ms).c_str();
+    timerAnimate->Interval = ms;
+    int fps = ms > 0 ? 1000 / ms : 0;
+    lFPS->Caption = (std::to_wstring(fps) + L" FPS").c_str();
+}
+
+void __fastcall TfrmMain::eAnimationSpeedChange(TObject *Sender)
+{
+    int ms = eAnimationSpeed->Text.ToIntDef(100);
+    if (ms < tbAnimationSpeed->Min) ms = tbAnimationSpeed->Min;
+    if (ms > tbAnimationSpeed->Max) ms = tbAnimationSpeed->Max;
+    tbAnimationSpeed->Position = ms;
+    timerAnimate->Interval = ms;
+    int fps = ms > 0 ? 1000 / ms : 0;
+    lFPS->Caption = (std::to_wstring(fps) + L" FPS").c_str();
 }

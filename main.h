@@ -654,6 +654,9 @@ __published:	// IDE-managed Components
 	TMenuItem *miPreviewAllowDrawing;
 	TMenuItem *N66;
 	TMenuItem *miHideIgnoredPixels;
+	TTrackBar *tbAnimationSpeed;
+	TEdit *eAnimationSpeed;
+	TLabel *lFPS;
 	void __fastcall sbBuildClick(TObject *Sender);
 	void __fastcall FormConstrainedResize(TObject *Sender, int &MinWidth, int &MinHeight,
           int &MaxWidth, int &MaxHeight);
@@ -826,6 +829,8 @@ __published:	// IDE-managed Components
 	void __fastcall miDrawTestPatternClick(TObject *Sender);
 	void __fastcall miPreviewAllowDrawingClick(TObject *Sender);
 	void __fastcall miHideIgnoredPixelsClick(TObject *Sender);
+	void __fastcall tbAnimationSpeedChange(TObject *Sender);
+	void __fastcall eAnimationSpeedChange(TObject *Sender);
 
 private:
 

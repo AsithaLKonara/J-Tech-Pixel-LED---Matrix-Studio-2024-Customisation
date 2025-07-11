@@ -32,6 +32,10 @@ TframePalette *framePalette;
 __fastcall TframePalette::TframePalette(TComponent* Owner)
 	: TFrame(Owner)
 {
+    sbSavePalette->Hint = L"Save current palette to file (plain text, one hex color per line)";
+    sbLoadPalette->Hint = L"Load palette from file (plain text, one hex color per line)";
+    sbSavePalette->OnClick = sbSavePaletteClick;
+    sbLoadPalette->OnClick = sbLoadPaletteClick;
 }
 
 
@@ -303,4 +307,45 @@ void __fastcall TframePalette::bClearClick(TObject *Sender)
 
         RGBPaletteHistoryIndex = 0;
 	}
+}
+
+void __fastcall TframePalette::sbSavePaletteClick(TObject *Sender)
+{
+    if (sdPalette->Execute())
+    {
+        std::wofstream file(sdPalette->FileName.c_str());
+        if (file)
+        {
+            for (int t = 0; t < kPalletCount; t++)
+            {
+                file << std::hex << std::setw(6) << std::setfill(L'0') << (RGBPaletteHistory[t]->Brush->Color & 0xFFFFFF) << std::endl;
+            }
+            file.close();
+        }
+    }
+}
+
+void __fastcall TframePalette::sbLoadPaletteClick(TObject *Sender)
+{
+    if (odPalette->Execute())
+    {
+        std::wifstream file(odPalette->FileName.c_str());
+        if (file)
+        {
+            std::wstring line;
+            int idx = 0;
+            while (std::getline(file, line) && idx < kPalletCount)
+            {
+                int color = 0;
+                try {
+                    color = std::stoi(line, nullptr, 16);
+                } catch (...) {
+                    color = 0;
+                }
+                RGBPaletteHistory[idx]->Brush->Color = TColor(color);
+                idx++;
+            }
+            file.close();
+        }
+    }
 }

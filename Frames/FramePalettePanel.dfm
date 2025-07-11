@@ -443,11 +443,38 @@ object framePalette: TframePalette
     OnMouseMove = sRGBP1MouseMove
   end
   object bClear: TSpeedButton
-    Left = 14
-    Top = 328
-    Width = 164
-    Height = 22
+    Left = 10
+    Top = 420
+    Width = 75
+    Height = 25
+    Caption = 'Clear'
     OnClick = bClearClick
+  end
+  object sbSavePalette: TSpeedButton
+    Left = 90
+    Top = 420
+    Width = 45
+    Height = 25
+    Caption = 'Save'
+    OnClick = sbSavePaletteClick
+    Hint = 'Save current palette to file (plain text, one hex color per line)'
+  end
+  object sbLoadPalette: TSpeedButton
+    Left = 140
+    Top = 420
+    Width = 45
+    Height = 25
+    Caption = 'Load'
+    OnClick = sbLoadPaletteClick
+    Hint = 'Load palette from file (plain text, one hex color per line)'
+  end
+  object odPalette: TOpenDialog
+    Filter = 'Palette files (*.txt)|*.txt|All files (*.*)|*.*'
+    Title = 'Load Palette'
+  end
+  object sdPalette: TSaveDialog
+    Filter = 'Palette files (*.txt)|*.txt|All files (*.*)|*.*'
+    Title = 'Save Palette'
   end
   object tbRed: TTrackBar
     Left = 6
