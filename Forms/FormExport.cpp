@@ -1470,20 +1470,25 @@ void __fastcall TfrmExport::bExportClick(TObject *Sender)
 		}
 		break;
 	case 1:
-		sdExport->Filter     = L"Binary file (.bin)|*.bin|Include file (.inc)|*.inc|Data file (.dat)|*.dat";
+		sdExport->Filter     = L"Binary file (.bin)|*.bin|Include file (.inc)|*.inc|Data file (.dat)|*.dat|Hex dump (.hex)|*.hex";
 		sdExport->DefaultExt = L".bin";
 
 		if (sdExport->Execute())
 		{
 			PreviewBinary();
 
-			if (SaveBinaryData(sdExport->FileName.c_str()))
+			std::wstring ext = ExtractFileExt(sdExport->FileName.c_str());
+			if (ext == L".hex")
 			{
-				//ModalResult = mrOk;
+				// Write as hex dump (text)
+				FileUtility::SaveVector(sdExport->FileName.c_str(), IOutput);
 			}
 			else
 			{
-				MessageDlg(L"Error Saving Binary Data", mtError, TMsgDlgButtons() << mbOK, 0);
+				if (!SaveBinaryData(sdExport->FileName.c_str()))
+				{
+					MessageDlg(L"Error Saving Binary Data", mtError, TMsgDlgButtons() << mbOK, 0);
+				}
 			}
 		}
         break;
@@ -1699,6 +1704,7 @@ void TfrmExport::SetGuiLanguageText()
 	GroupBox6->Caption = GLanguageHandler->Text[kOutput].c_str();
 
 	bExport->Caption = GLanguageHandler->Text[kExport].c_str();
+	bExport->Hint = L"Export as .bin (raw binary), .dat (data), or .hex (human-readable hex dump)";
 
 	bClose->Caption = GLanguageHandler->Text[kOK].c_str();
 	bCancel->Caption = GLanguageHandler->Text[kCancel].c_str();
