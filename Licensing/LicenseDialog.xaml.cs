@@ -1,0 +1,29 @@
+using System.Windows;
+
+namespace JTechPixelLED.Licensing
+{
+    public partial class LicenseDialog : Window
+    {
+        public LicenseDialog()
+        {
+            InitializeComponent();
+        }
+
+        private void Activate_Click(object sender, RoutedEventArgs e)
+        {
+            string key = LicenseKeyBox.Text.Trim();
+            string email = EmailBox.Text.Trim();
+
+            if (LicenseManager.ValidateLicense(key, email))
+            {
+                StatusText.Text = "Activation successful!";
+                this.DialogResult = true;
+                this.Close();
+            }
+            else
+            {
+                StatusText.Text = "Invalid license or email.";
+            }
+        }
+    }
+}

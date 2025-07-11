@@ -1,0 +1,15 @@
+<Window x:Class="JTechPixelLED.DrawingPanel.PixelDelayDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        Title="Set Pixel Delay" Height="140" Width="260" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <StackPanel Margin="20">
+        <TextBlock Text="Set delay for this pixel (seconds):" Margin="0,0,0,10"/>
+        <StackPanel Orientation="Horizontal">
+            <TextBox Name="DelayBox" Width="60"/>
+            <Slider Name="DelaySlider" Minimum="0.1" Maximum="2.0" Value="0.1" Width="120" TickFrequency="0.1" IsSnapToTickEnabled="True" Margin="10,0,0,0" ValueChanged="DelaySlider_ValueChanged"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15,0,0">
+            <Button Content="OK" Width="60" Margin="0,0,10,0" Click="OK_Click"/>
+            <Button Content="Cancel" Width="60" Click="Cancel_Click"/>
+        </StackPanel>
+    </StackPanel>
+</Window> 
