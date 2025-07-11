@@ -2,25 +2,47 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:drawingPanel="clr-namespace:JTechPixelLED.DrawingPanel"
-        Title="J Tech Pixel LED"
-        Height="600" Width="900"
-        Icon="Branding/appicon.ico">
+        Title="J Tech Pixel LED - LED Matrix Studio"
+        Height="700" Width="1000"
+        Icon="Branding/appicon.ico"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        <Menu VerticalAlignment="Top">
-            <MenuItem Header="_File">
-                <MenuItem Header="About" Click="About_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Menu Bar -->
+        <Menu Grid.Row="0" VerticalAlignment="Top">
+            <MenuItem Header="_File" ToolTip="File operations">
+                <MenuItem Header="About" Click="About_Click" ToolTip="About J Tech Pixel LED"/>
                 <Separator/>
-                <MenuItem Header="Exit" Click="Exit_Click"/>
+                <MenuItem Header="Exit" Click="Exit_Click" ToolTip="Exit the application"/>
             </MenuItem>
-            <MenuItem Header="_Plugins" Name="PluginsMenu"/>
-            <MenuItem Header="_Help">
-                <MenuItem Header="License" Click="License_Click"/>
+            <MenuItem Header="_Plugins" Name="PluginsMenu" ToolTip="Plugin management"/>
+            <MenuItem Header="_Help" ToolTip="Help and documentation">
+                <MenuItem Header="User Manual" Click="UserManual_Click" ToolTip="Open user manual"/>
+                <MenuItem Header="License" Click="License_Click" ToolTip="License information"/>
             </MenuItem>
         </Menu>
-        <TabControl Name="PluginTabs" Margin="0,30,0,0">
-            <TabItem Header="Pixel Drawing">
+        
+        <!-- Main Content -->
+        <TabControl Name="PluginTabs" Grid.Row="1" Margin="5">
+            <TabItem Header="Pixel Drawing" ToolTip="Create and edit LED animations">
                 <drawingPanel:PixelDrawingPanel />
             </TabItem>
         </TabControl>
+        
+        <!-- Status Bar -->
+        <StatusBar Grid.Row="2" Background="#F0F0F0">
+            <StatusBarItem>
+                <TextBlock Name="StatusText" Text="Ready" />
+            </StatusBarItem>
+            <Separator/>
+            <StatusBarItem>
+                <TextBlock Name="VersionText" Text="v1.0.0" />
+            </StatusBarItem>
+        </StatusBar>
     </Grid>
 </Window>

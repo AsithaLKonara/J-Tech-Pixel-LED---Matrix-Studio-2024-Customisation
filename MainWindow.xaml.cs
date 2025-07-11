@@ -13,7 +13,9 @@ namespace JTechPixelLED
         public MainWindow()
         {
             InitializeComponent();
-            this.Title = "J Tech Pixel LED";
+            this.Title = "J Tech Pixel LED - LED Matrix Studio";
+            StatusText.Text = "Ready - All plugins loaded successfully";
+            VersionText.Text = "v1.0.0";
             LoadPlugins();
         }
 
@@ -34,6 +36,33 @@ namespace JTechPixelLED
             license.ShowDialog();
         }
 
+        private void UserManual_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Open the user manual file if it exists
+                string manualPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "USER_MANUAL.md");
+                if (System.IO.File.Exists(manualPath))
+                {
+                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+                    {
+                        FileName = manualPath,
+                        UseShellExecute = true
+                    });
+                }
+                else
+                {
+                    MessageBox.Show("User manual not found. Please check the documentation folder.", 
+                        "User Manual", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error opening user manual: {ex.Message}", 
+                    "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
         private void LoadPlugins()
         {
             string pluginsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Plugins");
@@ -46,6 +75,7 @@ namespace JTechPixelLED
                 typeof(JTechPixelLED.Plugins.ArduinoUploader.ArduinoUploader),
                 typeof(JTechPixelLED.Plugins.ESP01Uploader.ESP01Uploader),
                 typeof(JTechPixelLED.Plugins.NuvotonUploader.NuvotonUploader),
+                typeof(JTechPixelLED.Plugins.ATM01Uploader.ATM01Uploader), // Register ATM01/RA508 placeholder
             };
 
             foreach (var type in pluginTypes)
