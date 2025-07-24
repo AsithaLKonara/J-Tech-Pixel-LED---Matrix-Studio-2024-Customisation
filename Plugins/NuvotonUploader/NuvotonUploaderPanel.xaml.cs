@@ -4,6 +4,8 @@ using Microsoft.Win32;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows;
+using JTechPixelLED.Plugins;
+
 
 namespace JTechPixelLED.Plugins.NuvotonUploader
 {
@@ -92,9 +94,8 @@ namespace JTechPixelLED.Plugins.NuvotonUploader
         private void SetControlsEnabled(bool enabled)
         {
             UploadButton.IsEnabled = enabled;
-            Browse_Click.IsEnabled = enabled;
             ComPortCombo.IsEnabled = enabled;
             FilePathBox.IsEnabled = enabled;
         }
     }
-} 
+}

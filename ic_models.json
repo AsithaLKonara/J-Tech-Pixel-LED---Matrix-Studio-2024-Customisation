@@ -1,0 +1,74 @@
+[
+  {
+    "ICName": "ATMEGA328P",
+    "Exporter": "AvrHexExporter",
+    "UploaderPlugin": "ATMEGAUploader",
+    "Options": { "baud": 115200 }
+  },
+  {
+    "ICName": "ATMEGA168P",
+    "Exporter": "AvrHexExporter",
+    "UploaderPlugin": "ATMEGAUploader",
+    "Options": { "baud": 115200 }
+  },
+  {
+    "ICName": "ATMEGA8A",
+    "Exporter": "AvrHexExporter",
+    "UploaderPlugin": "ATMEGAUploader",
+    "Options": { "baud": 19200 }
+  },
+  {
+    "ICName": "ATTINY85",
+    "Exporter": "AvrHexExporter",
+    "UploaderPlugin": "ATTINYUploader",
+    "Options": { "programmer": "usbasp", "baud": 19200 }
+  },
+  {
+    "ICName": "ESP32",
+    "Exporter": "BinaryExporter",
+    "UploaderPlugin": "ESP32Uploader",
+    "Options": { "baud": 921600 }
+  },
+  {
+    "ICName": "ESP8266",
+    "Exporter": "BinaryExporter",
+    "UploaderPlugin": "ESP12FUploader",
+    "Options": { "baud": 115200 }
+  },
+  {
+    "ICName": "STM32F103C8T6",
+    "Exporter": "STM32BinaryExporter",
+    "UploaderPlugin": "STM32Uploader",
+    "Options": { "baud": 57600 }
+  },
+  {
+    "ICName": "PIC16F84A",
+    "Exporter": "PicHexExporter",
+    "UploaderPlugin": "PICUploader",
+    "Options": { "chipType": "16F84A" }
+  },
+  {
+    "ICName": "PIC18F2520",
+    "Exporter": "PicHexExporter",
+    "UploaderPlugin": "PICUploader",
+    "Options": { "chipType": "18F2520" }
+  },
+  {
+    "ICName": "Nuvoton N76E003",
+    "Exporter": "NuvotonHexExporter",
+    "UploaderPlugin": "NuvotonUploader",
+    "Options": { "baud": 9600 }
+  },
+  {
+    "ICName": "RA508",
+    "Exporter": "BinaryExporter",
+    "UploaderPlugin": "RA508Uploader",
+    "Options": {}
+  },
+  {
+    "ICName": "ATM01",
+    "Exporter": "BinaryExporter",
+    "UploaderPlugin": "ATM01Uploader",
+    "Options": {}
+  }
+] 

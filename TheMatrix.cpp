@@ -11,7 +11,7 @@
 //
 // ===================================================================
 
-#include <algorithm>
+//#include <algorithm>
 #include <fstream>
 #include <Vcl.Dialogs.hpp>
 #include <Vcl.Imaging.GIFImg.hpp>
@@ -29,6 +29,58 @@
 
 extern LanguageHandler *GLanguageHandler;
 
+#pragma region Animation
+void TheMatrix::SetParameterReveal(int Width, int Height)
+{
+	for (int t = 0; t < ActionList.size(); t++)
+	{
+		int source = ActionList[t];
+
+		switch (source)
+		{
+		case actionTypeRevealLeftRight:
+			ParameterReveal = 0;
+			break;
+		case actionTypeRevealRightLeft:
+			ParameterReveal = Width;
+			break;
+		case actionTypeRevealTopBottom:
+			ParameterReveal = 0;
+			break;
+		case actionTypeRevealBottomTop:
+			ParameterReveal = Height;
+			break;
+		case actionTypeRevealCentreOut:
+			ParameterReveal = (Width * Height) / 2; // center point calculation
+			break;
+		case actionTypeRevealCentreIn:
+			ParameterReveal = 0;
+			break;
+		}
+	}
+}
+
+void TheMatrix::HandleRadialAnimation(int x, int y, int colour)
+{
+	if (Preview.IncrementRadially)
+	{
+			// Calculate radial animation pattern
+			int centerX = Details.Width / 2;
+			int centerY = Details.Height / 2;
+			
+			double distance = sqrt((x - centerX) * (x - centerX) + (y - centerY) * (y - centerY));
+			
+			if (distance > RadialOffset)
+			{
+				PlotPixelMatrix(x, y, colour);
+			}
+		}
+		else
+		{
+			PlotPixelMatrix(x, y, colour);
+		}
+}
+#pragma end_region
 
 TheMatrix::TheMatrix(TComponent *owner, TWinControl *Zig)
 {

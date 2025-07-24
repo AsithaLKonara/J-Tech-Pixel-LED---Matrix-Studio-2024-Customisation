@@ -23,9 +23,9 @@ namespace JTechPixelLED.DrawingPanel
         {
             if (double.TryParse(DelayBox.Text, out double val) && val >= 0.1 && val <= 2.0)
             {
-                Delay = val;
-                DialogResult = true;
-                Close();
+                this.Delay = val;
+                this.DialogResult = true;
+                this.Close();
             }
             else
             {
@@ -35,8 +35,8 @@ namespace JTechPixelLED.DrawingPanel
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult = false;
-            Close();
+            this.DialogResult = false;
+            this.Close();
         }
     }
 } 

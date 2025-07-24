@@ -1,4 +1,6 @@
 using System.Windows.Controls;
+using JTechPixelLED.Plugins;
+
 
 namespace JTechPixelLED.Plugins.NuvotonUploader
 {

@@ -192,6 +192,10 @@ struct ExportOptions
 
 	bool Examples = false; // include code example to output (BETA!)
 
+	// SD card export options
+	bool SplitForSDCard = false;
+	int MaxPixelsPerFile = 1000; // default batch size for SD card export
+
 	void clear(bool IsRGB)
 	{
 		Binary.clear(IsRGB);

@@ -1491,6 +1491,13 @@ void __fastcall TfrmExport::bExportClick(TObject *Sender)
 			}
 			else if (ext == L".bin" || ext == L".dat")
 			{
+				InternalEO.SplitForSDCard = cbSDCardExport->Checked;
+				if (cbSDCardExport->Checked) {
+					InternalEO.MaxPixelsPerFile = eBatchSize->Text.ToIntDef(1000);
+				} else {
+					InternalEO.MaxPixelsPerFile = 1000;
+				}
+
 				if (!SaveBinaryData(sdExport->FileName.c_str()))
 				{
 					MessageDlg(L"Error Saving Binary Data", mtError, TMsgDlgButtons() << mbOK, 0);
@@ -1498,6 +1505,9 @@ void __fastcall TfrmExport::bExportClick(TObject *Sender)
 				else
 				{
 					ShowMessage(L"Exported as .bin/.dat (raw binary). Use this for uploading to microcontrollers or hardware.");
+					if (InternalEO.SplitForSDCard) {
+						ShowMessage(L"Exported with SD card file splitting. Files are in Export/ESP32_SD/.");
+					}
 				}
 			}
 			else
@@ -1996,4 +2006,9 @@ void __fastcall TfrmExport::bResetBinaryClick(TObject *Sender)
 	reset_binary.Code = InternalEO.Code;
 
 	BuildFromProfile(reset_binary);
+}
+
+void __fastcall TfrmExport::cbSDCardExportClick(TObject *Sender)
+{
+    eBatchSize->Enabled = cbSDCardExport->Checked;
 }

@@ -37,4 +37,8 @@ namespace Utility
 	std::wstring ReplaceString(const std::wstring, const std::wstring&, const std::wstring&);
 
 	System::UnicodeString WS2US(const std::wstring);
+
+	// File and directory helpers for export splitting
+	bool WriteTextFile(const std::wstring& fileName, const std::wstring& content);
+	bool CreateDirectoryIfNotExists(const std::wstring& dirPath);
 }

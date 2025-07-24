@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop"> <PropertyGroup>
+<OutputType>WinExe</OutputType> 
+<TargetFramework>net9.0-windows</TargetFramework> 
+<UseWPF>true</UseWPF> 
+<RootNamespace>JTechPixelLED</RootNamespace> 
+<AssemblyName>JTechPixelLED</AssemblyName>
+<Nullable>enable</Nullable> <ImplicitUsings>enable</ImplicitUsings>
+<EnableDefaultCompileItems>true</EnableDefaultCompileItems> <!-- ✅ This line fixes NETSDK1022 --> 
+</PropertyGroup> <ItemGroup> <!-- XAML UI pages --> <Page Include="App.xaml" /> 
+<Page Include="MainWindow.xaml" /> <Page Include="ModeSelectionDialog.xaml" />
+<Page Include="AboutDialog.xaml" /> <Page Include="Licensing\LicenseDialog.xaml" />
+<Page Include="Plugins\ArduinoUploader\ArduinoUploaderPanel.xaml" /> <Page Include="Plugins\ESP01Uploader\ESP01UploaderPanel.xaml" /> 
+<Page Include="Plugins\NuvotonUploader\NuvotonUploaderPanel.xaml" /> <Page Include="Plugins\ATM01Uploader\ATM01UploaderPanel.xaml" /> 
+</ItemGroup><ItemGroup> <!-- Non-code files like manuals and readmes --> 
+<None Include="USER_MANUAL.md" /> <None Include="DEPLOYMENT.md" />
+<None Include="README.md" /> <None Include="RELEASE_SUMMARY.md" /> </ItemGroup> </Project>

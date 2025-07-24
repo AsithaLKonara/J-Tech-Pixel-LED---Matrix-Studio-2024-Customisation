@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Text.Json;
 using Microsoft.Win32;
-using System.Windows.Media;
+
 
 namespace JTechPixelLED.DrawingPanel
 {
@@ -19,8 +19,12 @@ namespace JTechPixelLED.DrawingPanel
         private int gridSize = 16;
         private bool rgbMode = false;
         private bool isPlaying = false;
-        private CancellationTokenSource playbackCts;
+        private CancellationTokenSource playbackCts = new CancellationTokenSource();
         private HashSet<(int,int)> animatingOff = new HashSet<(int,int)>();
+
+        // Fix non-nullable warnings for FrameData.Pixels and PixelData.Color
+        // FrameData.Pixels is initialized in FrameData constructor
+        // PixelData.Color is nullable (Color?)
 
         public PixelDrawingPanel()
         {
@@ -28,6 +32,9 @@ namespace JTechPixelLED.DrawingPanel
             Frames.Add(new FrameData(gridSize, gridSize));
             UpdateUI();
         }
+
+
+
 
         private void UpdateUI()
         {
@@ -353,5 +360,36 @@ namespace JTechPixelLED.DrawingPanel
             public double Delay { get; set; }
             public string Color { get; set; }
         }
+
+        // Export animation to CSV with per-pixel timing
+        private void ExportToCsvWithTiming(string filePath)
+        {
+            using (var writer = new System.IO.StreamWriter(filePath))
+            {
+                writer.WriteLine("frame,x,y,state,color,delay");
+                for (int f = 0; f < Frames.Count; f++)
+                {
+                    var frame = Frames[f];
+                    for (int x = 0; x < frame.Width; x++)
+                        for (int y = 0; y < frame.Height; y++)
+                        {
+                            var p = frame.Pixels[x, y];
+                            string color = p.Color.HasValue ? p.Color.Value.ToString() : "";
+                            writer.WriteLine($"{f},{x},{y},{(p.IsOn ? 1 : 0)},{color},{p.Delay:0.###}");
+                        }
+                }
+            }
+        }
+
+        // Add a button handler for SD card/ESP32 export
+        private void ExportSdCard_Click(object sender, RoutedEventArgs e)
+        {
+            var dlg = new Microsoft.Win32.SaveFileDialog { Filter = "CSV Files|*.csv" };
+            if (dlg.ShowDialog() == true)
+            {
+                ExportToCsvWithTiming(dlg.FileName);
+                MessageBox.Show("Exported animation with per-pixel timing to CSV for SD card/ESP32.");
+            }
+        }
     }
-} 
+}

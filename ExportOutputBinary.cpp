@@ -12,6 +12,8 @@
 // ===================================================================
 
 #include <algorithm>
+#include <fstream>
+#include <sstream>
 
 #include "ColourUtility.h"
 #include "Convert.h"
@@ -227,6 +229,38 @@ namespace ExportOutputBinary
 				}
 
 				BinaryAddContentByFrame(teo, op, t, output);
+			}
+		}
+
+        // After collecting all output, handle SD card file splitting if enabled
+        if (teo.SplitForSDCard) {
+            // Create output directory for SD card export
+            std::wstring outputDir = L"Export/ESP32_SD/"; // You may want to make this configurable
+            Utility::CreateDirectoryIfNotExists(outputDir); // Ensure this helper exists
+
+            int batchSize = teo.MaxPixelsPerFile;
+            int fileIndex = 1;
+            int pixelCount = 0;
+            std::wstring batchContent = L"";
+
+            for (const auto& line : output) {
+                if (!line.empty()) {
+                    batchContent += line + L"\n";
+                    pixelCount++;
+                    if (pixelCount >= batchSize) {
+                        // Write current batch to file
+                        std::wstring fileName = outputDir + L"out" + std::to_wstring(fileIndex) + L".dat";
+                        Utility::WriteTextFile(fileName, batchContent); // Ensure this helper exists
+                        batchContent.clear();
+                        pixelCount = 0;
+                        fileIndex++;
+                    }
+                }
+            }
+            // Write any remaining pixels
+            if (!batchContent.empty()) {
+                std::wstring fileName = outputDir + L"out" + std::to_wstring(fileIndex) + L".dat";
+                Utility::WriteTextFile(fileName, batchContent);
 			}
 		}
 
@@ -1204,4 +1238,35 @@ namespace ExportOutputBinary
 		output.push_back(m + L" ");
 		output.push_back(L"");
     }
+}
+
+// Helper: Read CSV with per-pixel timing and export SD card files in batches
+bool ReadPixelTimingCsvAndExportSdFiles(const std::wstring& csvFile, int batchSize, const std::wstring& outputDir)
+{
+    std::wifstream infile(csvFile);
+    if (!infile.is_open()) return false;
+    std::wstring header;
+    std::getline(infile, header); // skip header
+    int fileIndex = 1;
+    int pixelCount = 0;
+    std::wstringstream batch;
+    std::wstring line;
+    while (std::getline(infile, line)) {
+        if (line.empty()) continue;
+        batch << line << L"\n";
+        pixelCount++;
+        if (pixelCount >= batchSize) {
+            std::wstring fileName = outputDir + L"out" + std::to_wstring(fileIndex) + L".csv";
+            Utility::WriteTextFile(fileName, batch.str());
+            batch.str(L"");
+            batch.clear();
+            pixelCount = 0;
+            fileIndex++;
+        }
+    }
+    if (pixelCount > 0) {
+        std::wstring fileName = outputDir + L"out" + std::to_wstring(fileIndex) + L".csv";
+        Utility::WriteTextFile(fileName, batch.str());
+    }
+    return true;
 }

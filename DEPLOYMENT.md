@@ -63,6 +63,46 @@ esptool.py --version
 # Install and add to PATH
 # Available at: https://www.nuvoton.com/tool-and-software/software-development-tool/
 ```
+## Additional Tool Requirements
+
+For full functionality, ensure these tools are installed and in PATH:
+
+### ESP Uploader
+- `esptool.py` (Python package)
+- Python 3.7+
+
+### ATMEGA Uploader
+- `avrdude` (comes with Arduino IDE)
+- Arduino IDE (for tool installation)
+
+### ATTINY Uploader
+- `avrdude` with UPDI support
+- USBasp programmer (if using hardware)
+
+### PIC Uploader
+- PICkit3 software
+- MPLAB X IDE (for tool installation)
+
+### Export Tool
+- SD card library for Arduino
+- Python 3.7+ for esptool.py
+- AVR tools for ATMEGA/ATTINY
+- PIC tools for PICkit3
+
+## Additional Tool Requirements
+
+For full functionality, ensure these tools are installed and in PATH:
+
+### ATM01/RA508 Uploader
+- `atm01uploader` - Custom tool for ATM01/RA508
+- Requires specific hardware drivers for ATM01/RA508
+
+### Export Tool
+- `esptool.py` for ESP exports
+- `avrdude` for ATMEGA/ATTINY exports
+- `NuLinkISP.exe` for Nuvoton exports
+- `pk3cmd` for PIC exports
+
 
 ## File Structure
 ```

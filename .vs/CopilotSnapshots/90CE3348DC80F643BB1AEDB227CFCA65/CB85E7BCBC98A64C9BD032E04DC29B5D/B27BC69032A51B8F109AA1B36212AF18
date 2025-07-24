@@ -1,0 +1,12 @@
+﻿<Window x:Class="JTechPixelLED.AboutDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About J Tech Pixel LED" Height="250" Width="400">
+    <StackPanel Margin="20">
+        <TextBlock FontSize="20" FontWeight="Bold" Text="J Tech Pixel LED" Margin="0,0,0,10"/>
+        <TextBlock Text="Version 1.0.0"/>
+        <TextBlock Text="© 2024 J Tech. All rights reserved." Margin="0,10,0,0"/>
+        <TextBlock Text="Contact: support@jtech.com"/>
+        <Button Content="OK" Width="80" Margin="0,20,0,0" HorizontalAlignment="Right" Click="OK_Click"/>
+    </StackPanel>
+</Window>

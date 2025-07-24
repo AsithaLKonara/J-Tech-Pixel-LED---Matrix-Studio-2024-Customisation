@@ -182,6 +182,91 @@ One hex color per line.
 - **Right-click Menu**: Set pixel delay via context menu
 - **Visual Feedback**: Animated pixels are highlighted during playback
 
+## Export Tool
+
+The software includes an advanced export tool for large patterns that:
+- Splits patterns into groups of 1000 pixels
+- Creates organized folder structure for ESP32 SD card modules
+- Generates .bin, .dat, and .hex files for each chunk
+- Creates Arduino sketch for SD card reading
+
+### Usage:
+1. Open **Export Tool** tab
+2. Set chunk size (default: 1000 pixels)
+3. Click **Export** to generate files
+4. The output will be saved in:
+   `Documents/PixelLEDExports/Chunk_001/`, `Chunk_002/`, etc.
+5. Each chunk contains:
+   - `pattern_001.bin` - Binary file
+   - `pattern_001.dat` - Data file with metadata
+   - `pattern_001.hex` - Hex dump file
+6. Arduino sketch is generated as `UploaderSketch.ino`
+
+### Arduino Sketch Features
+- Reads all pattern files from SD card
+- Processes each chunk sequentially
+- Includes SD card initialization
+- Can be modified to add specific upload logic
+
+## Plugin Uploaders
+
+### ESP12F/ESP32 Uploader
+**Supported Hardware**: ESP12F, ESP32 modules
+
+**Requirements**:
+- `esptool.py` tool installed and in PATH
+- USB connection via CH340 or FTDI adapter
+- `.bin` or `.hex` files exported from the software
+
+**Usage**:
+1. Select the **ESP Uploader** tab
+2. Choose the COM port from the dropdown
+3. Select chip type (ESP12F/ESP32)
+4. Set flash size (4MB/8MB)
+5. Browse and select your firmware file
+6. Click **Upload** to flash the firmware
+7. Monitor progress in the log window
+
+**Command**: `esptool.py --chip [chip] --port COMx write_flash [params] file.bin`
+
+### ATMEGA8A/8L/168P/32/328P Uploader
+**Supported Hardware**: ATMEGA8A, 8L, 168P, 32, 328P
+
+**Requirements**:
+- `avrdude` tool installed and in PATH
+- USB connection to board
+- `.hex` or `.bin` files exported from the software
+
+**Usage**:
+1. Select the **ATMEGA Uploader** tab
+2. Choose the COM port from the dropdown
+3. Select chip type
+4. Set baud rate (default: 115200)
+5. Browse and select your firmware file
+6. Click **Upload** to flash the firmware
+7. Monitor progress in the log window
+
+**Command**: `avrdude -p [chip] -c arduino -P COMx -b [baud] -U flash:w:file.hex:i`
+
+### ATTINY13/25/43/85 Uploader
+**Supported Hardware**: ATTINY13, 25, 43, 85
+
+**Requirements**:
+- `avrdude` tool installed and in PATH
+- USBasp or UPDI programmer connected
+- `.hex` or `.bin` files exported from the software
+
+**Usage**:
+1. Select the **ATTINY Uploader** tab
+2. Choose the COM port from the dropdown
+3. Select programmer type (USBasp/UPDI)
+4. Select chip type
+5. Browse and select your firmware file
+6. Click **Upload** to flash the firmware
+7. Monitor progress in the log window
+
+**Command**: `avrdude -c [programmer] -p [chip] -P COMx -b 19200 -U flash:w:file.hex:i`
+
 ---
 
 ## Testing Guide

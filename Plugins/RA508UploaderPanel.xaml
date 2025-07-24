@@ -1,0 +1,30 @@
+<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/xaml"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Height="350" Width="400">
+    <materialDesign:Card Margin="16" Padding="16">
+        <StackPanel>
+            <TextBlock Text="RA508 Uploader" FontSize="18" FontWeight="Bold" Margin="0,0,0,12"/>
+            <TextBox materialDesign:HintAssist.Hint="File Path" Text="{Binding FilePath}" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="0,0,0,8" ToolTip="File to upload" AutomationProperties.Name="File Path"/>
+            <Button Content="Browse..." Command="{Binding BrowseCommand}" Style="{StaticResource MaterialDesignFlatButton}" Margin="0,0,0,8" ToolTip="Browse for file" AutomationProperties.Name="Browse File"/>
+            <TextBox materialDesign:HintAssist.Hint="Port" Text="{Binding Port}" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="0,0,0,8" ToolTip="Serial port (e.g., COM3)" AutomationProperties.Name="Port"/>
+            <Button Command="{Binding UploadCommand}" Style="{StaticResource MaterialDesignRaisedButton}" Margin="0,12,0,0" ToolTip="Start upload" AutomationProperties.Name="Upload">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <materialDesign:PackIcon Kind="Upload" Margin="0,0,8,0"/>
+                    <TextBlock Text="Upload"/>
+                </StackPanel>
+            </Button>
+            <ProgressBar IsIndeterminate="{Binding IsUploading}" Height="4" Margin="0,12,0,0"/>
+            <materialDesign:Card Margin="0,16,0,0" Padding="8">
+                <StackPanel>
+                    <TextBlock Text="Log:" FontWeight="Bold"/>
+                    <ScrollViewer Height="80">
+                        <TextBox Text="{Binding Log}" IsReadOnly="True" TextWrapping="Wrap"/>
+                    </ScrollViewer>
+                </StackPanel>
+            </materialDesign:Card>
+            <materialDesign:Snackbar x:Name="UploadSnackbar"/>
+        </StackPanel>
+    </materialDesign:Card>
+</UserControl> 

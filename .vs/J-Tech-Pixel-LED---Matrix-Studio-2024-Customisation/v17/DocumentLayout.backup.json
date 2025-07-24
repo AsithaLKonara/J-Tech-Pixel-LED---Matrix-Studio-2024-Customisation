@@ -1,0 +1,485 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\JTechPixelLED.csproj||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:JTechPixelLED.csproj||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\JTechPixelLED.sln||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:JTechPixelLED.sln||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\DrawingPanel\\FrameData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DrawingPanel\\FrameData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\DrawingPanel\\PixelDrawingPanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DrawingPanel\\PixelDrawingPanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Licensing\\LicenseManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Licensing\\LicenseManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ArduinoUploader\\ArduinoUploaderPanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Plugins\\ArduinoUploader\\ArduinoUploaderPanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ATM01Uploader\\ATM01Uploader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Plugins\\ATM01Uploader\\ATM01Uploader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\App.xaml||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:App.xaml||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Licensing\\LicenseDialog.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Licensing\\LicenseDialog.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\DrawingPanel\\PixelDrawingPanel.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DrawingPanel\\PixelDrawingPanel.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\MainWindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MainWindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\DrawingPanel\\PixelDelayDialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DrawingPanel\\PixelDelayDialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\ModeSelectionDialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ModeSelectionDialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ATM01Uploader\\ATM01UploaderPanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Plugins\\ATM01Uploader\\ATM01UploaderPanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ESP01Uploader\\ESP01UploaderPanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Plugins\\ESP01Uploader\\ESP01UploaderPanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\NuvotonUploader\\NuvotonUploaderPanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Plugins\\NuvotonUploader\\NuvotonUploaderPanel.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\NuvotonUploader\\NuvotonUploaderPanel.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Plugins\\NuvotonUploader\\NuvotonUploaderPanel.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\PluginLoader.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PluginLoader.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ArduinoUploader\\ArduinoUploaderPanel.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Plugins\\ArduinoUploader\\ArduinoUploaderPanel.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ArduinoUploader\\ArduinoUploaderPanel.dll||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Plugins\\ArduinoUploader\\ArduinoUploaderPanel.dll||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\ModeSelectionDialog.xaml||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ModeSelectionDialog.xaml||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\JTechPixelLED.Tests\\JTechPixelLED.Tests.csproj||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:JTechPixelLED.Tests\\JTechPixelLED.Tests.csproj||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\AboutDialog.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AboutDialog.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\DrawingPanel\\PixelDelayDialog.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DrawingPanel\\PixelDelayDialog.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ESP01Uploader\\ESP01UploaderPanel.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Plugins\\ESP01Uploader\\ESP01UploaderPanel.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\AboutDialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AboutDialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Licensing\\LicenseDialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Licensing\\LicenseDialog.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "JTechPixelLED.sln",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\JTechPixelLED.sln",
+              "RelativeDocumentMoniker": "JTechPixelLED.sln",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\JTechPixelLED.sln",
+              "RelativeToolTip": "JTechPixelLED.sln",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002855|",
+              "WhenOpened": "2025-07-22T13:33:42.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "AboutDialog.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\AboutDialog.xaml.cs",
+              "RelativeDocumentMoniker": "AboutDialog.xaml.cs",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\AboutDialog.xaml.cs",
+              "RelativeToolTip": "AboutDialog.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T09:51:51.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LicenseManager.cs",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Licensing\\LicenseManager.cs",
+              "RelativeDocumentMoniker": "Licensing\\LicenseManager.cs",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Licensing\\LicenseManager.cs",
+              "RelativeToolTip": "Licensing\\LicenseManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T09:29:28.508Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrameData.cs",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\DrawingPanel\\FrameData.cs",
+              "RelativeDocumentMoniker": "DrawingPanel\\FrameData.cs",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\DrawingPanel\\FrameData.cs",
+              "RelativeToolTip": "DrawingPanel\\FrameData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T08:11:47.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PixelDrawingPanel.xaml",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\DrawingPanel\\PixelDrawingPanel.xaml",
+              "RelativeDocumentMoniker": "DrawingPanel\\PixelDrawingPanel.xaml",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\DrawingPanel\\PixelDrawingPanel.xaml",
+              "RelativeToolTip": "DrawingPanel\\PixelDrawingPanel.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-22T07:52:20.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PixelDrawingPanel.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\DrawingPanel\\PixelDrawingPanel.xaml.cs",
+              "RelativeDocumentMoniker": "DrawingPanel\\PixelDrawingPanel.xaml.cs",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\DrawingPanel\\PixelDrawingPanel.xaml.cs",
+              "RelativeToolTip": "DrawingPanel\\PixelDrawingPanel.xaml.cs",
+              "ViewState": "AgIAAFQBAAAAAAAAAAAqwAUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T07:16:54.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T21:59:53.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-16T21:58:26.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JTechPixelLED.csproj",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\JTechPixelLED.csproj",
+              "RelativeDocumentMoniker": "JTechPixelLED.csproj",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\JTechPixelLED.csproj",
+              "RelativeToolTip": "JTechPixelLED.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-16T22:23:00.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "LicenseDialog.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Licensing\\LicenseDialog.xaml.cs",
+              "RelativeDocumentMoniker": "Licensing\\LicenseDialog.xaml.cs",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Licensing\\LicenseDialog.xaml.cs",
+              "RelativeToolTip": "Licensing\\LicenseDialog.xaml.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T09:52:34.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LicenseDialog.xaml",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Licensing\\LicenseDialog.xaml",
+              "RelativeDocumentMoniker": "Licensing\\LicenseDialog.xaml",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Licensing\\LicenseDialog.xaml",
+              "RelativeToolTip": "Licensing\\LicenseDialog.xaml",
+              "ViewState": "AgIAAAoAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-21T17:02:57.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ATM01Uploader.cs",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ATM01Uploader\\ATM01Uploader.cs",
+              "RelativeDocumentMoniker": "Plugins\\ATM01Uploader\\ATM01Uploader.cs",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ATM01Uploader\\ATM01Uploader.cs",
+              "RelativeToolTip": "Plugins\\ATM01Uploader\\ATM01Uploader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T06:03:00.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ArduinoUploaderPanel.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ArduinoUploader\\ArduinoUploaderPanel.xaml.cs",
+              "RelativeDocumentMoniker": "Plugins\\ArduinoUploader\\ArduinoUploaderPanel.xaml.cs",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ArduinoUploader\\ArduinoUploaderPanel.xaml.cs",
+              "RelativeToolTip": "Plugins\\ArduinoUploader\\ArduinoUploaderPanel.xaml.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAqwGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T07:15:48.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAqwGsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T22:01:09.005Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PixelDelayDialog.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\DrawingPanel\\PixelDelayDialog.xaml.cs",
+              "RelativeDocumentMoniker": "DrawingPanel\\PixelDelayDialog.xaml.cs",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\DrawingPanel\\PixelDelayDialog.xaml.cs",
+              "RelativeToolTip": "DrawingPanel\\PixelDelayDialog.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T07:39:03.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-21T21:51:49.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ATM01UploaderPanel.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ATM01Uploader\\ATM01UploaderPanel.xaml.cs",
+              "RelativeDocumentMoniker": "Plugins\\ATM01Uploader\\ATM01UploaderPanel.xaml.cs",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ATM01Uploader\\ATM01UploaderPanel.xaml.cs",
+              "RelativeToolTip": "Plugins\\ATM01Uploader\\ATM01UploaderPanel.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T07:15:03.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ESP01UploaderPanel.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ESP01Uploader\\ESP01UploaderPanel.xaml.cs",
+              "RelativeDocumentMoniker": "Plugins\\ESP01Uploader\\ESP01UploaderPanel.xaml.cs",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ESP01Uploader\\ESP01UploaderPanel.xaml.cs",
+              "RelativeToolTip": "Plugins\\ESP01Uploader\\ESP01UploaderPanel.xaml.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAqwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T07:14:33.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "NuvotonUploaderPanel.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\NuvotonUploader\\NuvotonUploaderPanel.xaml.cs",
+              "RelativeDocumentMoniker": "Plugins\\NuvotonUploader\\NuvotonUploaderPanel.xaml.cs",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\NuvotonUploader\\NuvotonUploaderPanel.xaml.cs",
+              "RelativeToolTip": "Plugins\\NuvotonUploader\\NuvotonUploaderPanel.xaml.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAqwGIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T07:12:53.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ModeSelectionDialog.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\ModeSelectionDialog.xaml.cs",
+              "RelativeDocumentMoniker": "ModeSelectionDialog.xaml.cs",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\ModeSelectionDialog.xaml.cs",
+              "RelativeToolTip": "ModeSelectionDialog.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T22:01:55.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PluginLoader.cs",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\PluginLoader.cs",
+              "RelativeDocumentMoniker": "PluginLoader.cs",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\PluginLoader.cs",
+              "RelativeToolTip": "PluginLoader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T06:20:35.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ArduinoUploaderPanel.dll",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ArduinoUploader\\ArduinoUploaderPanel.dll",
+              "RelativeDocumentMoniker": "Plugins\\ArduinoUploader\\ArduinoUploaderPanel.dll",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ArduinoUploader\\ArduinoUploaderPanel.dll",
+              "RelativeToolTip": "Plugins\\ArduinoUploader\\ArduinoUploaderPanel.dll",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001697|",
+              "WhenOpened": "2025-07-22T06:06:07.775Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "NuvotonUploaderPanel.xaml",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\NuvotonUploader\\NuvotonUploaderPanel.xaml",
+              "RelativeDocumentMoniker": "Plugins\\NuvotonUploader\\NuvotonUploaderPanel.xaml",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\NuvotonUploader\\NuvotonUploaderPanel.xaml",
+              "RelativeToolTip": "Plugins\\NuvotonUploader\\NuvotonUploaderPanel.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-21T17:04:02.369Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AboutDialog.xaml",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\AboutDialog.xaml",
+              "RelativeDocumentMoniker": "AboutDialog.xaml",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\AboutDialog.xaml",
+              "RelativeToolTip": "AboutDialog.xaml",
+              "ViewState": "AgIAAAoAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-21T17:02:15.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "PixelDelayDialog.xaml",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\DrawingPanel\\PixelDelayDialog.xaml",
+              "RelativeDocumentMoniker": "DrawingPanel\\PixelDelayDialog.xaml",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\DrawingPanel\\PixelDelayDialog.xaml",
+              "RelativeToolTip": "DrawingPanel\\PixelDelayDialog.xaml",
+              "ViewState": "AgIAAA4AAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-21T17:02:38.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ArduinoUploaderPanel.xaml",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ArduinoUploader\\ArduinoUploaderPanel.xaml",
+              "RelativeDocumentMoniker": "Plugins\\ArduinoUploader\\ArduinoUploaderPanel.xaml",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ArduinoUploader\\ArduinoUploaderPanel.xaml",
+              "RelativeToolTip": "Plugins\\ArduinoUploader\\ArduinoUploaderPanel.xaml",
+              "ViewState": "AgIAAB4AAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-21T17:03:19.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ESP01UploaderPanel.xaml",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ESP01Uploader\\ESP01UploaderPanel.xaml",
+              "RelativeDocumentMoniker": "Plugins\\ESP01Uploader\\ESP01UploaderPanel.xaml",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\Plugins\\ESP01Uploader\\ESP01UploaderPanel.xaml",
+              "RelativeToolTip": "Plugins\\ESP01Uploader\\ESP01UploaderPanel.xaml",
+              "ViewState": "AgIAAB8AAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-21T17:03:43.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "JTechPixelLED.Tests.csproj",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\JTechPixelLED.Tests\\JTechPixelLED.Tests.csproj",
+              "RelativeDocumentMoniker": "JTechPixelLED.Tests\\JTechPixelLED.Tests.csproj",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\JTechPixelLED.Tests\\JTechPixelLED.Tests.csproj",
+              "RelativeToolTip": "JTechPixelLED.Tests\\JTechPixelLED.Tests.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-16T20:57:56.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ModeSelectionDialog.xaml",
+              "DocumentMoniker": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\ModeSelectionDialog.xaml",
+              "RelativeDocumentMoniker": "ModeSelectionDialog.xaml",
+              "ToolTip": "C:\\Users\\asith\\OneDrive\\Desktop\\J Tech LED\\J-Tech-Pixel-LED---Matrix-Studio-2024-Customisation\\ModeSelectionDialog.xaml",
+              "RelativeToolTip": "ModeSelectionDialog.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-07-16T22:01:37.92Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

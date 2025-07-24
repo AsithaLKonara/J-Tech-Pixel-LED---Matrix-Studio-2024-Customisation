@@ -4,6 +4,8 @@ using Microsoft.Win32;
 using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows;
+using JTechPixelLED.Plugins;
+
 
 namespace JTechPixelLED.Plugins.ESP01Uploader
 {
@@ -16,6 +18,12 @@ namespace JTechPixelLED.Plugins.ESP01Uploader
             if (ComPortCombo.Items.Count > 0)
                 ComPortCombo.SelectedIndex = 0;
         }
+
+        private void About_Click(object sender, RoutedEventArgs e) { }
+        private void Exit_Click(object sender, RoutedEventArgs e) { }
+        private void UserManual_Click(object sender, RoutedEventArgs e) { }
+        private void License_Click(object sender, RoutedEventArgs e) { }
+
 
         private void Browse_Click(object sender, System.Windows.RoutedEventArgs e)
         {
@@ -93,9 +101,8 @@ namespace JTechPixelLED.Plugins.ESP01Uploader
         private void SetControlsEnabled(bool enabled)
         {
             UploadButton.IsEnabled = enabled;
-            Browse_Click.IsEnabled = enabled;
             ComPortCombo.IsEnabled = enabled;
             FilePathBox.IsEnabled = enabled;
         }
     }
-} 
+}

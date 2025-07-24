@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>JTechPixelLED</RootNamespace>
+    <AssemblyName>JTechPixelLED</AssemblyName>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="App.xaml.cs" />
+    <Compile Include="MainWindow.xaml.cs" />
+    <Compile Include="ModeSelectionDialog.xaml.cs" />
+    <Compile Include="AboutDialog.xaml.cs" />
+    <Compile Include="Licensing\LicenseDialog.xaml.cs" />
+    <Compile Include="Licensing\LicenseManager.cs" />
+    <Compile Include="Plugins\IUploaderPlugin.cs" />
+    <Compile Include="Plugins\ArduinoUploader\ArduinoUploader.cs" />
+    <Compile Include="Plugins\ArduinoUploader\ArduinoUploaderPanel.xaml.cs" />
+    <Compile Include="Plugins\ESP01Uploader\ESP01Uploader.cs" />
+    <Compile Include="Plugins\ESP01Uploader\ESP01UploaderPanel.xaml.cs" />
+    <Compile Include="Plugins\NuvotonUploader\NuvotonUploader.cs" />
+    <Compile Include="Plugins\NuvotonUploader\NuvotonUploaderPanel.xaml.cs" />
+    <Compile Include="Plugins\ATM01Uploader\ATM01Uploader.cs" />
+    <Compile Include="Plugins\ATM01Uploader\ATM01UploaderPanel.xaml.cs" />
+    <Compile Include="Utils\SerialPortHelper.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="App.xaml" />
+    <Page Include="MainWindow.xaml" />
+    <Page Include="ModeSelectionDialog.xaml" />
+    <Page Include="AboutDialog.xaml" />
+    <Page Include="Licensing\LicenseDialog.xaml" />
+    <Page Include="Plugins\ArduinoUploader\ArduinoUploaderPanel.xaml" />
+    <Page Include="Plugins\ESP01Uploader\ESP01UploaderPanel.xaml" />
+    <Page Include="Plugins\NuvotonUploader\NuvotonUploaderPanel.xaml" />
+    <Page Include="Plugins\ATM01Uploader\ATM01UploaderPanel.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="USER_MANUAL.md" />
+    <None Include="DEPLOYMENT.md" />
+    <None Include="README.md" />
+    <None Include="RELEASE_SUMMARY.md" />
+  </ItemGroup>
+
+</Project>

@@ -64,6 +64,79 @@ extern PresetHandler *GPresetHandler;
 extern ProfileHandler *GProfileHandler;
 extern SystemSettings *GSystemSettings;
 
+#pragma region Animation
+void TheMatrix::SetParameterReveal(int Width, int Height)
+{
+	for (int t = 0; t < ActionList.size(); t++)
+	{
+		int source = ActionList[t];
+
+		switch (source)
+		{
+		case actionTypeRevealLeftRight:
+			ParameterReveal = 0;
+			break;
+		case actionTypeRevealRightLeft:
+			ParameterReveal = Width;
+			break;
+		case actionTypeRevealTopBottom:
+			ParameterReveal = 0;
+			break;
+		case actionTypeRevealBottomTop:
+			ParameterReveal = Height;
+			break;
+		case actionTypeRevealCentreOut:
+			ParameterReveal = (Width * Height) / 2; // center point calculation
+			break;
+		case actionTypeRevealCentreIn:
+			ParameterReveal = 0;
+			break;
+		}
+	}
+}
+
+
+void TfrmMain::HandleATM01Error(int errorCode)
+{
+	switch (errorCode)
+	{
+		case 1001:
+			MessageDlg("ATM01/RA508: Invalid COM port format", mtError, mbOK, 0);
+			break;
+		case 1002:
+			MessageDlg("ATM01/RA508: Firmware file not found", mtError, mbOK, 0);
+			break;
+		case 1003:
+			MessageDlg("ATM01/RA508: Upload failed - check hardware connection", mtError, mbOK, 0);
+			break;
+		default:
+			MessageDlg("ATM01/RA508: Unknown error occurred", mtError, mbOK, 0);
+			break;
+
+	}
+}
+
+void TheMatrix::HandleRadialAnimation(int x, int y, int colour)
+{
+	if (Preview.IncrementRadially)
+	{
+			// Calculate radial animation pattern
+			int centerX = Details.Width / 2;
+			int centerY = Details.Height / 2;
+			
+			double distance = sqrt((x - centerX) * (x - centerX) + (y - centerY) * (y - centerY));
+			
+			if (distance > RadialOffset)
+			{
+				PlotPixelMatrix(x, y, colour);
+			}
+		}
+		else
+		{
+			PlotPixelMatrix(x, y, colour);
+		}
+}
+#pragma end_region
 
 __fastcall TfrmMain::TfrmMain(TComponent* Owner)
 	: TForm(Owner)

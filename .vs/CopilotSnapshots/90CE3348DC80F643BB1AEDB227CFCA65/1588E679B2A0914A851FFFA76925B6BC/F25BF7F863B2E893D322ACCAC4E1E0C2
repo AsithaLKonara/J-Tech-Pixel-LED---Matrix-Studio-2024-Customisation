@@ -1,0 +1,22 @@
+﻿<Application x:Class="JTechPixelLED.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Startup="Application_Startup"
+             ShutdownMode="OnMainWindowClose">
+    <Application.Resources>
+        <!-- Application-wide styles and resources go here -->
+
+        <!-- Example: default font and style -->
+        <Style TargetType="Window">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="ResizeMode" Value="CanResize"/>
+        </Style>
+
+        <!-- Add theme or brush resources if needed -->
+        <!--
+        <SolidColorBrush x:Key="PrimaryColor" Color="#FF1E1E1E"/>
+        -->
+
+    </Application.Resources>
+</Application>

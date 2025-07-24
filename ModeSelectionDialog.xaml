@@ -1,0 +1,19 @@
+<Window x:Class="JTechPixelLED.ModeSelectionDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Select Mode" Height="350" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <StackPanel Margin="20">
+        <TextBlock Text="Select Startup Mode" FontWeight="Bold" FontSize="18" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+        <ListBox x:Name="ModeListBox" SelectedIndex="0" Height="180" Margin="0,0,0,20">
+            <ListBoxItem Content="Normal LED Programming"/>
+            <ListBoxItem Content="Buduras Mala"/>
+            <ListBoxItem Content="Viyans"/>
+            <ListBoxItem Content="DJ Panel"/>
+            <ListBoxItem Content="Edit Drawing"/>
+        </ListBox>
+        <TextBlock Text="Select IC Model" FontWeight="Bold" FontSize="14" Margin="0,0,0,5" HorizontalAlignment="Center"/>
+        <ComboBox x:Name="ICModelComboBox" Height="28" Margin="0,0,0,20"/>
+        <Button Content="Try Demo" Style="{StaticResource MaterialDesignOutlinedButton}" Margin="0,24,0,0" Height="40" ToolTip="Try demo mode" AutomationProperties.Name="Try Demo Button"/>
+        <Button Content="Continue" Style="{StaticResource MaterialDesignRaisedButton}" Margin="0,8,0,0" Height="40" ToolTip="Continue with selected mode" AutomationProperties.Name="Continue Button"/>
+    </StackPanel>
+</Window>

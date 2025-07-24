@@ -106,3 +106,52 @@ public:
 		}
 	}
 };
+
+#pragma region Animation
+void ActionObject::HandleRadialAnimation(int x, int y, int colour)
+{
+	if (Preview.IncrementRadially)
+	{
+		int centerX = Details.Width / 2;
+		int centerY = Details.Height / 2;
+		
+		double distance = sqrt((x - centerX) * (x - centerX) + (y - centerY) * (y - centerY));
+		
+		if (distance > RadialOffset)
+		{
+			PlotPixelMatrix(x, y, colour);
+		}
+	}
+	else
+	{
+		PlotPixelMatrix(x, y, colour);
+	}
+}
+
+void ActionObject::HandleRevealAnimation(int x, int y, int colour)
+{
+	switch (RevealDirection)
+	{
+		case RevealDirection::kLeftRight:
+			if (x > RevealOffset) PlotPixelMatrix(x, y, colour);
+			break;
+		case RevealDirection::kRightLeft:
+			if (x < RevealOffset) PlotPixelMatrix(x, y, colour);
+			break;
+		case RevealDirection::kTopBottom:
+			if (y > RevealOffset) PlotPixelMatrix(x, y, colour);
+			break;
+		case RevealDirection::kBottomTop:
+			if (y < RevealOffset) PlotPixelMatrix(x, y, colour);
+			break;
+		case RevealDirection::kCentreOut:
+			if (sqrt((x - Width/2)*(x - Width/2) + (y - Height/2)*(y - Height/2)) > RevealOffset)
+				PlotPixelMatrix(x, y, colour);
+			break;
+		case RevealDirection::kCentreIn:
+			if (sqrt((x - Width/2)*(x - Width/2) + (y - Height/2)*(y - Height/2)) < RevealOffset)
+				PlotPixelMatrix(x, y, colour);
+			break;
+	}
+}
+#pragma end_region

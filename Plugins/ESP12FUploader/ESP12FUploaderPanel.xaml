@@ -1,0 +1,11 @@
+<UserControl x:Class="JTechPixelLED.Plugins.ESP12FUploaderPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <StackPanel>
+        <TextBlock Text="ESP12F Uploader" FontSize="16" Margin="5"/>
+        <Button Content="Select File" Click="SelectFile_Click" Margin="5"/>
+        <TextBox x:Name="FilePathTextBox" Margin="5" Width="400"/>
+        <Button Content="Upload" Click="Upload_Click" Margin="5"/>
+        <TextBox x:Name="LogTextBox" Height="100" IsReadOnly="True" TextWrapping="Wrap"/>
+    </StackPanel>
+</UserControl>

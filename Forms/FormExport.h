@@ -172,6 +172,7 @@ __published:	// IDE-managed Components
           bool &Handled);
 	void __fastcall bResetCodeClick(TObject *Sender);
 	void __fastcall bResetBinaryClick(TObject *Sender);
+	void __fastcall cbSDCardExportClick(TObject *Sender);
 private:
 
     int LastScrollValue = 0;

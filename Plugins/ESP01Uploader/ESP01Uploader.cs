@@ -1,20 +1,57 @@
-using System.Windows.Controls;
+using JTechPixelLED.Plugins;
+using System.Diagnostics;
 
-namespace JTechPixelLED.Plugins.ESP01Uploader
+namespace JTechPixelLED.Plugins.ESP12FUploader
 {
-    public class ESP01Uploader : IUploaderPlugin
+    public class ESP12FUploader : IUploaderPlugin
     {
-        public string Name => "ESP01 Uploader";
+        public string GetPluginName() => "ESP12F Uploader";
 
-        public UserControl GetUploaderPanel()
+        public void Upload(string filePath)
         {
-            return new ESP01UploaderPanel();
+            try
+            {
+                if (string.IsNullOrEmpty(filePath))
+                {
+                    MessageBox.Show("Please select a valid .bin file.");
+                    return;
+                }
+
+                ProcessStartInfo startInfo = new ProcessStartInfo
+                {
+                    FileName = "esptool.py",
+                    Arguments = $"--port COM4 write_flash 0x00000 {filePath}",
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = false
+                };
+
+                using (Process process = Process.Start(startInfo))
+                {
+                    process.WaitForExit();
+                    string output = process.StandardOutput.ReadToEnd();
+                    string error = process.StandardError.ReadToEnd();
+
+                    if (process.ExitCode == 0)
+                    {
+                        MessageBox.Show("ESP12F upload successful!");
+                    }
+                    else
+                    {
+                        MessageBox.Show($"ESP12F upload failed:\n{error}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
         }
 
-        public void Upload(string filePath, string comPort, System.Action<string> logCallback)
+        public void DetectIC()
         {
-            // TODO: Call esptool.py and capture output
-            logCallback("Uploading to ESP01 via esptool.py...");
+            // Add logic to detect ESP12F via esptool.py
         }
     }
-} 
+}

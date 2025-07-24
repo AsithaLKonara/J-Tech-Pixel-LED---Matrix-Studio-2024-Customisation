@@ -14,6 +14,8 @@
 #include "LanguageConstants.h"
 #include "LanguageHandler.h"
 #include "Utility.h"
+#include <fstream>
+#include <filesystem>
 
 extern LanguageHandler *GLanguageHandler;
 
@@ -160,5 +162,30 @@ namespace Utility
 	System::UnicodeString WS2US(const std::wstring s)
 	{
         return s.c_str();
+	}
+
+	bool WriteTextFile(const std::wstring& fileName, const std::wstring& content)
+	{
+		try {
+			std::wofstream file(fileName);
+			if (!file.is_open()) return false;
+			file << content;
+			file.close();
+			return true;
+		} catch (...) {
+			return false;
+		}
+	}
+
+	bool CreateDirectoryIfNotExists(const std::wstring& dirPath)
+	{
+		try {
+			if (!std::filesystem::exists(dirPath)) {
+				return std::filesystem::create_directories(dirPath);
+			}
+			return true;
+		} catch (...) {
+			return false;
+		}
 	}
 }

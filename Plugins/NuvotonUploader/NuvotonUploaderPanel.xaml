@@ -1,5 +1,6 @@
 <UserControl x:Class="JTechPixelLED.Plugins.NuvotonUploader.NuvotonUploaderPanel"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              Height="250" Width="420">
     <StackPanel Margin="10">
         <TextBlock Text="Nuvoton (Nu-Link) Upload" FontWeight="Bold" FontSize="16" Margin="0,0,0,10"/>
